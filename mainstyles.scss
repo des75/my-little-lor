@@ -1,0 +1,165 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("www.linux.org.ru") {
+
+	 .icon-star:before, .icon-star-empty:before {
+	  font-family: "stars" !important;
+	  font-style: normal;
+	  font-weight: normal;
+	  speak: none;
+	 
+	  display: inline-block;
+	  text-decoration: inherit;
+	  width: 1em;
+	  margin-right: .2em;
+	  text-align: center;
+	  font-variant: normal;
+	  text-transform: none;
+	  line-height: 1em;
+	  margin-left: .2em;
+	}
+	 
+	.icon-star:before { content: '\2605' !important; } /* '★' */
+	.icon-star-empty:before { content: '\2606' !important; } /* '☆' */
+
+	@mixin equestria{
+		font-family: 'equestria' !important;
+		font-weight: normal !important;
+		font-style: normal !important;
+		color: #ed3c95 !important;
+		text-decoration: none !important;
+		text-shadow: 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white, 0px 0px 2px white !important;
+	}
+
+	$color_pink : #ed3c95;
+
+	body, html{
+		max-width: none !important;
+		background-color: transparent !important;	
+		color: #444 !important;
+		font-family: "Comic Sans", "Comic Sans MS", sans-serif !important;
+	}
+	a, .stars{
+		color: $color_pink !important;
+	}
+	.stars{
+		font-family: "stars" !important;
+	}
+	a.tag{
+		color: #FCAF3E !important;
+	}
+	.nav-buttons{
+			a{
+				background: $color_pink !important;	
+				color: white !important;
+			
+
+				&:hover{
+					background: darken($color_pink, 10) !important;
+				}
+			}
+	}
+
+	h1, h2, h3, #navPath, .msg-top-header, .page-number{
+		@include equestria; 
+		* {
+			@include equestria;
+		}		
+	}
+	h1, #navPath{
+		font-size: 40px;
+	}
+	.page-number{
+		font-size: 28px !important;
+		border: none !important;
+		background: transparent !important;
+	}
+	strong,span{
+		&.page-number{
+			color: #272C2D !important;
+		}
+	}
+
+	#boxlets{
+		float: none !important;
+	}
+	#news{
+		margin-top: -280px !important;
+	}
+
+	.boxlet ,.infoblock{
+
+	    h2{
+	    	font-size: 2.3em !important;
+	    }
+	}
+
+	#bd .forum table{
+		background-color: rgba(255, 255, 255, 0.8) !important;
+	}
+	#bd .forum table tbody tr:hover{
+		background-color: white !important;
+	}
+	.message-table .tag,
+	#bd .forum table thead{
+		background-color: $color_pink !important;
+		color: white !important;
+		a{
+			color: white !important;
+		}
+	}
+	#bd .forum table {
+		th, td{
+			border: 1px solid darken($color_pink, 5) !important;
+		}
+	}
+	.messages .msg{
+		background: transparent !important;		
+		&:target{
+			border: 1px solid $color_pink !important;
+		}
+	}
+	div.msg_body h2{
+		font-size: 2em !important;
+	}
+
+	 article, .boxlet, #counter_block, .infoblock, #nav-menu, #contents, #toc, #p-lang, #category-index, .messages .msg, #warning-text, #tag-page-forum, fieldset, legend, #wiki-footer, #tag-page-news, #whois_userpic{
+	  background-color: rgba(255,255,255,0.8) !important;
+	  border-top-color: white !important;
+	  border-left-color: white !important;
+	  border-radius: 5px !important;
+	  border-right-color: #bbbbbb !important;
+	  border-bottom-color: #bbbbbb !important;
+	  padding: 5px 10px !important;
+	  margin-top: 10px !important;
+	  margin-bottom: 10px !important;
+	 }
+	 #whois_userpic{
+	 	padding: 20px 10px !important;
+	 }
+
+	 [src*="/img/tuxlor"]{
+	 	height:0 !important; 
+	 	width:0 !important;
+	 	padding: 20px 0 0 21px !important;
+	 	margin-right: 3px !important;
+	 	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3gEGFiYriyIENQAAABl0RVh0Q29tbWVudABDcmVhdGVkIHdpdGggR0lNUFeBDhcAAANrSURBVDjLjZRdaBxVGIafc2Z/ZtN04yTbxpDWWjFJKdXqohWUqFcaQWWxKV7VCroFUcbijbReqkSwNLKUggbBvyspOEHFgIimQSkYthKFNaRWmtLWmmTH/O9kZs7xYmfrGpPG72bO8L3zzvv9vEe4uQKWY+PmChJIAzHAtRw7dHOFB4FdwOeWY1/lf4a0HLt2PgacAUaBk26u0AcMA+8C52ogN1fYkFREwGZgDGhfB6eAr4CPLMf+tFbdDUkj4hIQQ+uXRKP5vF7yekFUEaFCJOPoIASlM5Zjz9xIaSwivBeYBML0J4fGg+KlNv/7C4hNSRCgrsxi7N2GPzyB+mPuaeDUhqTAr0AJKVr9Hy4cR/NA7O7tIKvFGLdvAUOC1gCXNxxU1J95y7GPNNgPj6HJXm+MBpRCewHhZBk9752LevufqB+gqE9Uhop/Rsct1azA//EiamIKXfHRFR+EOAEcBfJAB3AJeN9y7L+uK43Iau93Rr0FQC94hOPXULPLaC8AIYh2eQIoAC8Dx4ETbq5g1BSvViqA+4BelD7ofzexNRi/ViNzUfoUUjy7xuqdB3qBOeCirM+YPVlt9mTPEjdOq/Li1vDqXNRXjbQaLice6TLRuh34GViq+3Qb8FNkkn2xdQb4evjbDHrRQ6ZNSBiknkjvkc1Ne4KS9ZaaLI9iyNP1eqJnE5D9F+n0wEh8ZsyNaS9ojd+zHT27jNHehM7ewqDZTCxUPH5g0/B839eeSMn1NsoV0wMjO4ADQAa4Dc2uWMq4I5kxEQkDlAalmEpJGnxFo8/ud3qypcO5wkngxVWEDnAwFk3z7folC5bDfhOeww/LCAb9hWCqaTZ8I2HF0UjnVeg6XBWxOjqApAR+AV4Bfgc+Dr2wbfOtjRpBGhg0H80e2bx/35srs8GxcFEDdFa+HC0QqpY1SFuAVpnJd+tMvrsf2JvJdz9zU0e6Uyv9ArACfFNDhyvqQ3/BPw9AwnhItqWH1iD9DCjJ6YERADL57vnKUDGlNX1ACqgAX/yD1+WwoqquCXVn8qm7zgK7gX5gBigDHwA7ZCbfXf+nJ4H7gQB4z+zJ6prbhBQtRlKm61Zop+XYpciy30aVHQWurN7TIvBYdCeciQxRFbcczsRvbngtctwSMFoZKmL2ZD03VzgEdAEly7FX/gbCj16NQxqy8wAAAABJRU5ErkJggg==);
+	 }
+
+	.btn.btn-default{
+		background: $color_pink !important;
+		color: #fff !important;
+		&:hover{
+			background: darken($color_pink, 10) !important;
+		}
+	}
+
+	.code{
+		border-color: $color_pink !important;
+		background: white !important;
+		color: $color_pink !important; 
+		*{
+			color: $color_pink !important; 
+		}
+	}
+}
