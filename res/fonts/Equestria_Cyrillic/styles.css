@@ -1,0 +1,8 @@
+
+@font-face {
+	font-family: 'Equestria_Cyrillic';
+	src: url('Equestria_Cyrillic.eot?') format('eot'), 
+	     url('Equestria_Cyrillic.woff') format('woff'), 
+	     url('Equestria_Cyrillic.ttf')  format('truetype'),
+	     url('Equestria_Cyrillic.svg#Equestria_Cyrillic') format('svg');
+}
